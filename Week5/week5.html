@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+         *{
+             margin: 0;
+         }
+            #topnav {
+            background-color: #333; 
+            height: 50px; 
+            top: 0; 
+            width: 100%; 
+            position: fixed; 
+            left: 0; 
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        #topnav a {
+            float: right; 
+            display: block; 
+            color: #f2f2f2; 
+            text-align: center; 
+            padding: 14px 16px; 
+            text-decoration: none;
+        }
+
+        button {
+            display: block;
+            height: 100%;
+            width: 100px;
+            position: relative;
+            left: 0;
+            text-align: center;
+            background-color: #4CAF50;
+            color: #f2f2f2;
+            text-decoration: none;
+            border: none;
+            padding: none;
+            margin-top: 48px;
+            min-width: 100px;
+
+        }
+
+        button:hover{
+            background-color: #333;
+        }
+
+        div button:hover ~ #leftnav
+        {
+            display: flex;
+        }
+
+        .flex-container {
+            display: flex;
+            height: 100%;
+            border: solid 1px;
+           
+            
+        }
+
+        #leftnav {
+            display: none;
+            width: 300px; 
+            height: 100%; 
+        }
+
+        #leftnav ul 
+        {
+            list-style-type: none;  
+            padding: 0;
+            top: 50px;
+            width: 300px; 
+            background-color: #f1f1f1;
+            height: 100%; 
+            position: relative ; 
+            overflow: auto;
+            margin: 0;
+           
+        }
+
+        #leftnav a {
+            display: block;
+            padding: 8px 16px;
+            color: #000;
+            text-decoration: none;
+        }
+
+
+        #leftnav:hover 
+        {
+            display: flex;
+        }
+
+        #active {
+            display: block;
+            color: white;
+            text-decoration: none;
+            background-color: #4CAF50;
+
+        }
+
+        .content {
+            padding: 20px;
+            margin-top: 100px;
+            margin-left: 100px;
+        }
+
+        @media only screen and (max-width:500px)
+        {
+             button {
+                 margin-top: 0px;
+                 height: 48px;
+                 position: fixed;
+             }
+
+
+        
+        }
+
+        </style>
+        <title> Home </title>
+    </head>
+
+    <body>
+        <div id = "topnav" name = "topnavbar">
+            <a href = "../html.html" > HTML </a>
+            <a href = "../css.html" > CSS </a>
+            <a href = "../js.html" > Javascript </a>
+        </div>
+
+            
+        <div class = "flex-container">
+
+            <button type ="button"> Click me! </button>
+
+            <div id ="leftnav" >
+            <ul>
+                <a href = "syntax.html"> Syntax </a>
+ 
+                <a href = "selectors.html"> Selectors </a>
+  
+                <a href = "colors.html"> Colors </a>
+
+                <a id ="active" href = "backgrounds.html"> Backgrounds </a>
+ 
+                <a href = "margins.html"> Margins </a>
+
+                <a href = "sizes.html"> Sizes </a>
+
+                <a href = "texts.html"> Texts </a>
+
+                <a href = "fonts.html"> Fonts </a>
+            </ul>
+            </div>
+
+            <div class = "content">
+                <p> This page currently has no content</p>
+
+            </div>
+
+        </div>
+    </body>
+</html>
